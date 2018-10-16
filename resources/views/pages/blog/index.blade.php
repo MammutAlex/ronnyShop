@@ -32,7 +32,6 @@
                                 <span class="news-post-cat">{{$post->created_at->format('d-m-y')}}</span>
                                 <p>
                                     {!! str_limit($post->text,40) !!}
-                                    {{}}
                                 </p>
                                 <a href="{{route('blog.show',$post->id)}}" class="mas-link">
                                     Продолжить чтение <i class="ion-ios-arrow-right"></i>

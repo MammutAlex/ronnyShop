@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Web;
 
+use App\Article;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -16,7 +17,8 @@ class BlogTest extends TestCase
 
     public function testShowArticlePage()
     {
-        $this->get(route('blog.show',1))
+        $article = factory(Article::class)->create();
+        $this->get(route('blog.show', $article->id))
             ->assertStatus(200);
     }
 }

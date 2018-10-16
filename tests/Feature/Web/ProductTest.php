@@ -15,13 +15,13 @@ class ProductTest extends TestCase
 {
     public function testShowProductListPage()
     {
-        $this->get(route('product.index'))
+        $this->get(route('products.index'))
             ->assertStatus(200);
     }
 
     public function testShowProductPage()
     {
-        $this->get(route('product.show',1))
+        $this->get(route('products.show',1))
             ->assertStatus(200);
     }
 }
