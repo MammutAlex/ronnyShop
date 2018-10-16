@@ -7,7 +7,7 @@
     <section id="content-region-3" class="padding-40 page-tree-bg">
         <div class="container">
             <h3 class="page-tree-text">
-                Blog Masonry
+                Блог Ронни
             </h3>
         </div>
     </section><!--page-tree end here-->
@@ -15,191 +15,39 @@
     <div class="blog-masonary-wrapper">
         <div class="container">
             <div class="row mas-boxes" id="mas-boxes">
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/mas-images/2.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/blog/blog-1.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
+                @foreach ($articles as $post)
+                    <div class="mas-boxes-inner col-md-4 col-sm-6">
+                        <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
+                            <div class="news-thumnail">
+                                <a href="{{route('blog.show',$post->id)}}">
+                                    <img src="{{$post->photo}}" class="img-fluid" alt="{{$post->title}}">
+                                </a>
+                            </div>
+                            <div class="news-desc">
+                                <h3 class="blog-post-title">
+                                    <a href="{{route('blog.show',$post->id)}}" class="hover-color">
+                                        {{$post->title}}
+                                    </a>
+                                </h3>
+                                <span class="news-post-cat">{{$post->created_at->format('d-m-y')}}</span>
+                                <p>
+                                    {!! str_limit($post->text,40) !!}
+                                    {{}}
+                                </p>
+                                <a href="{{route('blog.show',$post->id)}}" class="mas-link">
+                                    Продолжить чтение <i class="ion-ios-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/blog/blog-3.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/blog/blog-4.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/mas-images/2.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/mas-images/1.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/blog/blog-1.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/blog/blog-2.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/img-2.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mas-boxes-inner col-md-4 col-sm-6">
-                    <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                        <div class="news-thumnail">
-                            <a href="blog-post.html">
-                                <img src="/img/img-5.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="news-desc">
-                            <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
-                            <span class="news-post-cat">On 26 may 2014 | sports</span>
-                            <p>
-                                aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
-                            </p>
-                            <a href="#" class="mas-link">Continue Reading <i class="ion-ios-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="container">
 
             <div class="clearfix">
                 <div class="float-right">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
+                    {{ $articles->links() }}
                 </div>
             </div>
         </div>

@@ -8,15 +8,21 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Article;
+
 class BlogController extends BaseWebController
 {
-    public function index()
+    public function index(Article $model)
     {
-        return view('pages.blog.index');
+        return view('pages.blog.index', [
+            'articles' => $model->paginate(9)
+        ]);
     }
 
-    public function show($id)
+    public function show(Article $blog)
     {
-        return view('pages.blog.show');
+        return view('pages.blog.show', [
+            'blog' => $blog
+        ]);
     }
 }
