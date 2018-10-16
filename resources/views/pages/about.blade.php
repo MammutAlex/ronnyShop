@@ -1,0 +1,365 @@
+@extends('layouts.app')
+@section('style')
+    <!--cube portfolio-->
+    <link href="/cubeportfolio/css/cubeportfolio.min.css" rel='stylesheet'>
+@endsection
+@section('content')
+    <div class="space-70"></div>
+    <section id="content-region-3" class="padding-40 page-tree-bg">
+        <div class="container">
+            <h3 class="page-tree-text">
+                Who we are
+            </h3>
+        </div>
+    </section><!--page-tree end here-->
+    <div class="space-70"></div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h4 class="heading-mini">About our company</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet pulvinar risus, at
+                    posuere justo scelerisque sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                    posuere cubilia Curae.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet pulvinar risus, at
+                    posuere justo scelerisque sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                    posuere cubilia Curae.
+
+                </p>
+
+                <br>
+                <ul class="icon-list list-unstyled">
+                    <li><i class="ion-checkmark-round"></i> Lorem ipsum dolor sit amet, consectetur</li>
+                    <li><i class="ion-checkmark-round"></i> Suspendisse tristique velit vel ligula mattis</li>
+                    <li><i class="ion-checkmark-round"></i> Curabitur tincidunt iaculis est posuere</li>
+                    <li><i class="ion-checkmark-round"></i> Vestibulum vitae nibh elit phasellus sed</li>
+                </ul>
+
+
+            </div>
+            <div class="col-lg-6">
+                <div id="js-grid-slider-thumbnail" class="cbp ">
+                    <div class="cbp-item">
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="/img/work/work-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cbp-item">
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="/img/work/work-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cbp-item">
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="/img/work/work-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>         <!--about company row end-->
+        <div class="space-70"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="heading-mini">Our team</h4>
+            </div>
+
+            <div class="col-lg-3 col-md-6 margin-btm-20">
+                <div class="person-section">
+                    <img src="/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <div class="person-desc">
+                        <h3>John doe <span>web designer</span></h3>
+
+                        <p>
+                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        </p>
+                        <ul class=" team list-inline social-btn">
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-facebook"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title=""
+                                                                        data-original-title="Like On Facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-twitter" data-toggle="tooltip"
+                                                                        data-placement="top" title=""
+                                                                        data-original-title="Follow On twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-googleplus"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title=""
+                                                                        data-original-title="Follow On googleplus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--person section end-->
+            </div><!--person col end-->
+            <div class="col-lg-3 col-md-6 margin-btm-20">
+                <div class="person-section">
+                    <img src="/img/team/team-2.jpg" class="img-fluid" alt="">
+                    <div class="person-desc">
+                        <h3>John doe <span>web designer</span></h3>
+
+                        <p>
+                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        </p>
+                        <ul class=" team list-inline social-btn">
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-facebook"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title=""
+                                                                        data-original-title="Like On Facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-twitter" data-toggle="tooltip"
+                                                                        data-placement="top" title=""
+                                                                        data-original-title="Follow On twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-googleplus"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title=""
+                                                                        data-original-title="Follow On googleplus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--person section end-->
+            </div><!--person col end-->
+            <div class="col-lg-3 col-md-6 margin-btm-20">
+                <div class="person-section">
+                    <img src="/img/team/team-3.jpg" class="img-fluid" alt="">
+                    <div class="person-desc">
+                        <h3>John doe <span>web designer</span></h3>
+
+                        <p>
+                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        </p>
+                        <ul class=" team list-inline social-btn">
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-facebook"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title=""
+                                                                        data-original-title="Like On Facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-twitter" data-toggle="tooltip"
+                                                                        data-placement="top" title=""
+                                                                        data-original-title="Follow On twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-googleplus"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title=""
+                                                                        data-original-title="Follow On googleplus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--person section end-->
+            </div><!--person col end-->
+            <div class="col-lg-3 col-md-6 margin-btm-20">
+                <div class="person-section">
+                    <img src="/img/team/team-4.jpg" class="img-fluid" alt="">
+                    <div class="person-desc">
+                        <h3>John doe <span>web designer</span></h3>
+
+                        <p>
+                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        </p>
+                        <ul class=" team list-inline social-btn">
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-facebook"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title=""
+                                                                        data-original-title="Like On Facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-twitter" data-toggle="tooltip"
+                                                                        data-placement="top" title=""
+                                                                        data-original-title="Follow On twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="ion-social-googleplus"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title=""
+                                                                        data-original-title="Follow On googleplus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--person section end-->
+            </div><!--person col end-->
+        </div><!--our team row end-->
+        <div class="space-70"></div>
+        <div class="row">
+            <div class="col-md-6 margin-btm-20">
+                <h4 class="heading-mini">Our Carzy Skills</h4>
+                <h3 class="heading-progress">Web Design <span class="pull-right">88%</span></h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 88%" aria-valuemax="100" aria-valuemin="0"
+                         aria-valuenow="88" role="progressbar">
+                    </div>
+                </div>
+                <h3 class="heading-progress">Web Development <span class="pull-right">78%</span></h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 78%" aria-valuemax="100" aria-valuemin="0"
+                         aria-valuenow="78" role="progressbar">
+                    </div>
+                </div>
+                <h3 class="heading-progress">Marketing <span class="pull-right">82%</span></h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 82%" aria-valuemax="100" aria-valuemin="0"
+                         aria-valuenow="82" role="progressbar">
+                    </div>
+                </div>
+                <h3 class="heading-progress">Seo <span class="pull-right">72%</span></h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 72%" aria-valuemax="100" aria-valuemin="0"
+                         aria-valuenow="82" role="progressbar">
+                    </div>
+                </div>
+            </div><!--our skill progress bar col end-->
+
+            <div class="col-md-6 hire-sec">
+                <h4 class="heading-mini">Why hire us?</h4>
+                <div class="row">
+                    <div class="col-md-3 services-icon">
+                        <i class="ion-laptop"></i>
+                    </div><!--services icon-->
+                    <div class="col-md-9 services-text">
+                        <h4 class="heading-mini">100% Responsive layout</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce
+                            condimentum mollis eros vitae facilisis.
+                        </p>
+                    </div><!--services 1 text-->
+                </div><!--services 1 row-->
+                <div class="space-20"></div>
+                <div class="row">
+                    <div class="col-md-3 services-icon">
+                        <i class="ion-ios-barcode-outline"></i>
+                    </div><!--services icon-->
+                    <div class="col-md-9 services-text">
+                        <h4 class="heading-mini">html5 css3</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce
+                            condimentum mollis eros vitae facilisis.
+                        </p>
+                    </div><!--services 2 text-->
+                </div><!--services 2 row-->
+
+            </div><!--hire section end-->
+        </div><!--row-->
+    </div><!--about content end-->
+    <div class="space-50"></div>
+    <section id="content-region-2" class="slider-testimonials ">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto text-center">
+                    <i class="ion-quote display-4 margin-btm-40 text-primary"></i>
+                    <div class="swiper-container swiper-text">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p class="lead">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris.
+                                    Fusce condimentum mollis eros vitae facilisis.
+                                </p>
+                                <img src="/img/team/team-1.jpg" alt="" class="img-fluid rounded-circle"
+                                     width="60">
+                                <h6>John Doe -
+                                    <small>Bizwrap User</small>
+                                </h6>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="lead">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris.
+                                    Fusce condimentum mollis eros vitae facilisis.
+                                </p>
+                                <img src="/img/team/team-2.jpg" alt="" class="img-fluid rounded-circle"
+                                     width="60">
+                                <h6>John Doe -
+                                    <small>Bizwrap User</small>
+                                </h6>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="lead">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris.
+                                    Fusce condimentum mollis eros vitae facilisis.
+                                </p>
+                                <img src="/img/team/team-3.jpg" alt="" class="img-fluid rounded-circle"
+                                     width="60">
+                                <h6>John Doe -
+                                    <small>Bizwrap User</small>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!--testimonials section end here-->
+    <div class="space-70"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="heading-sec">Our Process</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 margin-btm-20">
+                <div class="process-box">
+                    <i class="ion-beaker"></i>
+                    <h4>1. Planing</h4>
+                </div><!--process box end-->
+            </div>
+            <div class="col-lg-3 col-md-6 margin-btm-20">
+                <div class="process-box">
+                    <i class="ion-compose"></i>
+                    <h4>2. Design</h4>
+                </div><!--process box end-->
+            </div>
+            <div class="col-lg-3 col-md-6 margin-btm-20">
+                <div class="process-box">
+                    <i class="ion-settings"></i>
+                    <h4>3. Development</h4>
+                </div><!--process box end-->
+            </div>
+            <div class="col-lg-3 col-md-6 margin-btm-20">
+                <div class="process-box">
+                    <i class="ion-paper-airplane"></i>
+                    <h4>4. Launch</h4>
+                </div><!--process box end-->
+            </div>
+        </div><!--process row end-->
+    </div><!--our process content end-->
+    <div class="space-70"></div>
+@endsection
+@section('script')
+    <script src="/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <script>
+        (function ($, window, document, undefined) {
+            'use strict';
+
+            // init cubeportfolio
+            $('#js-grid-slider-thumbnail').cubeportfolio({
+                layoutMode: 'slider',
+                drag: true,
+                auto: false,
+                autoTimeout: 5000,
+                autoPauseOnHover: true,
+                showNavigation: false,
+                showPagination: false,
+                rewindNav: true,
+                scrollByPage: true,
+                gridAdjustment: 'responsive',
+                mediaQueries: [{
+                    width: 0,
+                    cols: 1,
+                }],
+                gapHorizontal: 0,
+                gapVertical: 0,
+                caption: '',
+                displayType: 'fadeIn',
+                displayTypeSpeed: 400,
+                plugins: {
+                    slider: {
+                        pagination: '#js-pagination-slider',
+                        paginationClass: 'cbp-pagination-active',
+                    }
+                },
+            });
+        })(jQuery, window, document);
+    </script>
+@endsection
