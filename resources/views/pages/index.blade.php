@@ -78,7 +78,8 @@
                     <i class="ion-laptop"></i>
                     <h4>Responsive design</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl risus, porta sit amet dui eget...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl risus, porta sit amet
+                        dui eget...
                     </p>
                 </div>
             </div><!--services box-->
@@ -87,7 +88,8 @@
                     <i class="ion-ios-color-wand-outline"></i>
                     <h4>Creative ideas</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl risus, porta sit amet dui eget...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl risus, porta sit amet
+                        dui eget...
                     </p>
                 </div>
             </div><!--services box-->
@@ -96,17 +98,20 @@
                     <i class="ion-social-twitter-outline"></i>
                     <h4>Bootstrap4</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl risus, porta sit amet dui eget...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nisl risus, porta sit amet
+                        dui eget...
                     </p>
                 </div>
             </div><!--services box-->
         </div><!--row end-->
         <div class="space-30"></div>
         <div class="text-center">
-            <a class="modal-video theme-btn-color-outline btn-radius btn" href="https://www.youtube.com/watch?v=cctFcl5EFYk">Watch Video <i class="ion-play"></i></a>
+            <a class="modal-video theme-btn-color-outline btn-radius btn"
+               href="https://www.youtube.com/watch?v=cctFcl5EFYk">Watch Video <i class="ion-play"></i></a>
         </div>
     </div><!--intro with services end-->
-    <div class="space-70"></div><div class="space-30"></div>
+    <div class="space-70"></div>
+    <div class="space-30"></div>
 
     <div class="container">
         <div class="row">
@@ -210,7 +215,9 @@
                 <div class="col-md-7 features">
                     <h3>Our services</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce condimentum mollis eros vitae facilisis. Praesent gravida dignissim felis, id sagittis mauris rutrum non. Nullam pretium id sem ut hendrerit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce
+                        condimentum mollis eros vitae facilisis. Praesent gravida dignissim felis, id sagittis mauris
+                        rutrum non. Nullam pretium id sem ut hendrerit.
                     </p>
                     <div class="space-30"></div>
                     <div class="row">
@@ -220,7 +227,8 @@
                         <div class="col-md-9 services-text">
                             <h4 class="heading-mini">100% Responsive layout</h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce condimentum mollis eros vitae facilisis.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce
+                                condimentum mollis eros vitae facilisis.
                             </p>
                         </div>
                     </div><!--services list-->
@@ -232,7 +240,8 @@
                         <div class="col-md-9 services-text">
                             <h4 class="heading-mini">Clean code</h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce condimentum mollis eros vitae facilisis.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce
+                                condimentum mollis eros vitae facilisis.
                             </p>
                         </div>
                     </div><!--services list-->
@@ -244,7 +253,8 @@
                         <div class="col-md-9 services-text">
                             <h4 class="heading-mini">Easy customization</h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce condimentum mollis eros vitae facilisis.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce
+                                condimentum mollis eros vitae facilisis.
                             </p>
                         </div>
                     </div><!--services list-->
@@ -268,24 +278,33 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <p class="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce condimentum mollis eros vitae facilisis.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris.
+                                    Fusce condimentum mollis eros vitae facilisis.
                                 </p>
                                 <img src="/img/team/team-1.jpg" alt="" class="img-fluid rounded-circle" width="60">
-                                <h6>John Doe - <small>Bizwrap User</small></h6>
+                                <h6>John Doe -
+                                    <small>Bizwrap User</small>
+                                </h6>
                             </div>
                             <div class="swiper-slide">
                                 <p class="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce condimentum mollis eros vitae facilisis.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris.
+                                    Fusce condimentum mollis eros vitae facilisis.
                                 </p>
                                 <img src="/img/team/team-2.jpg" alt="" class="img-fluid rounded-circle" width="60">
-                                <h6>John Doe - <small>Bizwrap User</small></h6>
+                                <h6>John Doe -
+                                    <small>Bizwrap User</small>
+                                </h6>
                             </div>
                             <div class="swiper-slide">
                                 <p class="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris. Fusce condimentum mollis eros vitae facilisis.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum mauris.
+                                    Fusce condimentum mollis eros vitae facilisis.
                                 </p>
                                 <img src="/img/team/team-3.jpg" alt="" class="img-fluid rounded-circle" width="60">
-                                <h6>John Doe - <small>Bizwrap User</small></h6>
+                                <h6>John Doe -
+                                    <small>Bizwrap User</small>
+                                </h6>
                             </div>
                         </div>
                     </div>
@@ -309,7 +328,8 @@
                         </a>
                     </div>
                     <div class="news-desc">
-                        <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
+                        <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit
+                                amet</a></h3>
                         <span class="news-post-cat">On 26 may 2014 | sports</span>
                         <p>
                             aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
@@ -325,7 +345,8 @@
                         </a>
                     </div>
                     <div class="news-desc">
-                        <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
+                        <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit
+                                amet</a></h3>
                         <span class="news-post-cat">On 26 may 2014 | sports</span>
                         <p>
                             aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
@@ -341,7 +362,8 @@
                         </a>
                     </div>
                     <div class="news-desc">
-                        <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit amet</a></h3>
+                        <h3 class="blog-post-title"><a href="blog-post.html" class="hover-color">Lorem ipsum dollor sit
+                                amet</a></h3>
                         <span class="news-post-cat">On 26 may 2014 | sports</span>
                         <p>
                             aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..

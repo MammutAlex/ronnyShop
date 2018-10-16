@@ -18,6 +18,6 @@ Route::resource('/blog', 'BlogController', [
     'only' => ['index', 'show']
 ]);
 
-Route::resource('/product', 'ProductController', [
+Route::resource('/products', 'ProductController', [
     'only' => ['index', 'show']
 ]);

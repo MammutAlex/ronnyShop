@@ -4,7 +4,6 @@
     <link href="/cubeportfolio/css/cubeportfolio.min.css" rel='stylesheet'>
 @endsection
 @section('content')
-    <div class="space-70"></div>
     <section id="content-region-3" class="padding-40 page-tree-bg">
         <div class="container">
             <h3 class="page-tree-text">
