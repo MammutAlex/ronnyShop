@@ -24,6 +24,11 @@
                     <li class="dropdown nav-item {{$isActiveRoute('about')}}">
                         <a href="{{route('about')}}" class="nav-link">О нас</a>
                     </li>
+                    @auth
+                        <li class="dropdown nav-item">
+                            <a href="{{config('nova.path')}}" class="nav-link">Админ панель</a>
+                        </li>
+                    @endauth
                 </ul>
             </div>
         </div>

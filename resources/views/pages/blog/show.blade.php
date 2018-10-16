@@ -17,7 +17,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="blog-post-section">
                     <div class="blog-post-img">
-                        <img src="{{$blog->photo}}" class="img-fluid img-" alt="{{$blog->title}}">
+                        <img src="{{$blog->photo_url}}" class="img-fluid img-" alt="{{$blog->title}}">
                     </div>
                     <div class="blog-post-header">
                         <h3><a href="" class="hover-color">{{$blog->title}}</a></h3>
@@ -26,7 +26,7 @@
                         <span>{{$blog->created_at->format('d-m-y')}}</span>
                     </div>
                     <div class="blog-post-detail">
-                        {!! $blog->text !!}
+                        @markdown($blog->text)
                     </div>
                 </div><!--blog post section end-->
             </div><!--blog content-->

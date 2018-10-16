@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "87c4de6879b62b12df4d96e1f775e462",
+    "content-hash": "5a29f730993af5041a48dd42d13482a4",
     "packages": [
+        {
+            "name": "andreasindal/laravel-markdown",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andreasindal/laravel-markdown.git",
+                "reference": "afa349ec54bd05711e34e73c73f68fa4f1671420"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andreasindal/laravel-markdown/zipball/afa349ec54bd05711e34e73c73f68fa4f1671420",
+                "reference": "afa349ec54bd05711e34e73c73f68fa4f1671420",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "^1.6",
+                "illuminate/support": "^5.5|^5.6|^5.7"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.9",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Indal\\Markdown\\MarkdownServiceProvider"
+                    ],
+                    "aliases": {
+                        "Markdown": "Indal\\Markdown\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Indal\\Markdown\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Indal",
+                    "email": "andreas@rocketship.se"
+                }
+            ],
+            "description": "Simple Blade directive for markdown parsing.",
+            "time": "2018-09-16T18:58:54+00:00"
+        },
         {
             "name": "cakephp/chronos",
             "version": "1.2.2",
@@ -508,6 +562,49 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "johnathan/nova-trumbowyg",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Johnathan/nova-trumbowyg.git",
+                "reference": "351e5c824f8ed13aae3dfeba2840957661d05bb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Johnathan/nova-trumbowyg/zipball/351e5c824f8ed13aae3dfeba2840957661d05bb1",
+                "reference": "351e5c824f8ed13aae3dfeba2840957661d05bb1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Johnathan\\NovaTrumbowyg\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Johnathan\\NovaTrumbowyg\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova wrapper for the Trumbowyg WYSIWYG editor",
+            "keywords": [
+                "laravel",
+                "nova",
+                "trumbowyg",
+                "wysiwyg"
+            ],
+            "time": "2018-10-09T11:56:45+00:00"
         },
         {
             "name": "laravel/framework",

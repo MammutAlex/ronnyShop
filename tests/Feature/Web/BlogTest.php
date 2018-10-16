@@ -17,7 +17,9 @@ class BlogTest extends TestCase
 
     public function testShowArticlePage()
     {
-        $article = factory(Article::class)->create();
+        $article = factory(Article::class)->create([
+            'photo'=>''
+        ]);
         $this->get(route('blog.show', $article->id))
             ->assertStatus(200);
     }

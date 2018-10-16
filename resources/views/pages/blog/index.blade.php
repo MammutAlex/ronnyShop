@@ -20,7 +20,7 @@
                         <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
                             <div class="news-thumnail">
                                 <a href="{{route('blog.show',$post->id)}}">
-                                    <img src="{{$post->photo}}" class="img-fluid" alt="{{$post->title}}">
+                                    <img src="{{$post->photo_url}}" class="img-fluid" alt="{{$post->title}}">
                                 </a>
                             </div>
                             <div class="news-desc">
@@ -31,7 +31,7 @@
                                 </h3>
                                 <span class="news-post-cat">{{$post->created_at->format('d-m-y')}}</span>
                                 <p>
-                                    {!! str_limit($post->text,40) !!}
+                                    @markdown(str_limit($post->text,100))
                                 </p>
                                 <a href="{{route('blog.show',$post->id)}}" class="mas-link">
                                     Продолжить чтение <i class="ion-ios-arrow-right"></i>

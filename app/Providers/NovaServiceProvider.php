@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Nova\Article;
+use App\Nova\Metrics\NewArticles;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Cards\Help;
 use Illuminate\Support\Facades\Gate;
@@ -54,7 +55,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-            new Help,
+            new NewArticles,
+//            new Help,
         ];
     }
 

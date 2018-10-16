@@ -6,7 +6,9 @@ use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Article extends Resource
@@ -14,6 +16,11 @@ class Article extends Resource
     public static function label()
     {
         return 'Статти';
+    }
+
+    public static function softDeletes()
+    {
+        return true;
     }
 
     public static function singularLabel()
@@ -55,13 +62,13 @@ class Article extends Resource
     public function fields(Request $request)
     {
         return [
-            Image::make('Фото', 'photo'),
+            Image::make('Фото', 'photo')->disk('public')->prunable(),
             Text::make('Заголовок', 'title')
                 ->rules('required', 'max:255'),
-            Text::make('Текст', 'text')
+            Markdown::make('Текст', 'text')
                 ->rules('required')->hideFromIndex(),
-            DateTime::make('Дата создания', 'created_at')
-                ->format('d-m-Y h:m')
+            DateTime::make('Дата публикации', 'published_at')
+                ->format('YYYY-MM-DD kk:mm')
                 ->sortable(),
         ];
     }
