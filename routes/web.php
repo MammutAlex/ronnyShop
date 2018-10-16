@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ServiceController@index')->name('index');
+Route::get('/about', 'ServiceController@about')->name('about');
+
+Route::resource('/blog', 'BlogController', [
+    'only' => ['index', 'show']
+]);
+
+Route::resource('/product', 'ProductController', [
+    'only' => ['index', 'show']
+]);
