@@ -7,7 +7,7 @@
     <section id="content-region-3" class="padding-40 page-tree-bg page-tree-bg2">
         <div class="container">
             <h3 class="page-tree-text">
-                Shop product
+                {{$product->title}}
             </h3>
         </div>
     </section><!--page-tree end here-->
@@ -21,59 +21,62 @@
                     <div class="cbp-item">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="/img/shop/d1.jpg" alt="">
+                                <img src="{{$product->photo_url}}" alt="{{$product->title}}">
                             </div>
                         </div>
                     </div>
-                    <div class="cbp-item">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="/img/shop/d2.jpg" alt="">
+                    @foreach($product->images_url as $image)
+                        <div class="cbp-item">
+                            <div class="cbp-caption">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="{{$image}}" alt="{{$product->title}}">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="cbp-item">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="/img/shop/d3.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div id="js-pagination-slider">
                     <div class="cbp-pagination-item cbp-pagination-active">
-                        <img src="/img/shop/d1.jpg" alt="">
+                        <img src="{{$product->photo_url}}" alt="{{$product->title}}">
                     </div>
-                    <div class="cbp-pagination-item">
-                        <img src="/img/shop/d2.jpg" alt="">
-                    </div>
-                    <div class="cbp-pagination-item">
-                        <img src="/img/shop/d3.jpg" alt="">
-                    </div>
+                    @foreach($product->images_url as $image)
+                        <div class="cbp-pagination-item">
+                            <img src="{{$image}}" alt="{{$product->title}}">
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="product-detail">
-                    <h2>Standard Black Watch</h2>
-                    <span class="price">$79.00</span>
+                    <h2>{{$product->title}}</h2>
+                    <span class="price">{{$product->price}}</span>
                     <p>
-                        Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern personalized look.
+                        {{$product->description}}
                     </p>
                     <form class="cart">
                         <div class="add-to-cart-table">
                             <div class="quantity">
-                                <input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text qty text">
+                                <input type="number" step="1" min="1" name="quantity" value="1" title="Qty"
+                                       class="input-text qty text">
                             </div>
-                            <button type="button" class="button">Add to cart</button>
+                            <button type="button" class="button">В корзину</button>
                         </div>
                     </form>
                     <div class="space-30"></div>
                     <div class="cart-socials">
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#" data-toggle="tooltip" title="" data-original-title="Add to wishlist"><i class="ion-heart"></i></a></li>
-                            <li class="list-inline-item"><a href="#" data-toggle="tooltip" title="" data-original-title="Share on FB"><i class="ion-social-facebook-outline"></i></a></li>
-                            <li class="list-inline-item"><a href="#" data-toggle="tooltip" title="" data-original-title="Share on Twitter"><i class="ion-social-twitter-outline"></i></a></li>
-                            <li class="list-inline-item"><a href="#" data-toggle="tooltip" title="" data-original-title="Share to Pinterest"><i class="ion-social-pinterest-outline"></i></a></li>
+                            <li class="list-inline-item"><a href="#" data-toggle="tooltip" title=""
+                                                            data-original-title="Add to wishlist"><i
+                                        class="ion-heart"></i></a></li>
+                            <li class="list-inline-item"><a href="#" data-toggle="tooltip" title=""
+                                                            data-original-title="Share on FB"><i
+                                        class="ion-social-facebook-outline"></i></a></li>
+                            <li class="list-inline-item"><a href="#" data-toggle="tooltip" title=""
+                                                            data-original-title="Share on Twitter"><i
+                                        class="ion-social-twitter-outline"></i></a></li>
+                            <li class="list-inline-item"><a href="#" data-toggle="tooltip" title=""
+                                                            data-original-title="Share to Pinterest"><i
+                                        class="ion-social-pinterest-outline"></i></a></li>
                         </ul>
                     </div>
                     <div class="space-30"></div>
@@ -91,28 +94,36 @@
             <div class="col-md-8 mr-auto ml-auto product-information">
                 <!-- Nav tabs -->
                 <ul class="item-info-tabs nav" role="tablist">
-                    <li class="nav-item"><a class="active nav-link" href="#Description" data-taget="#Description" role="tab" data-toggle="tab">Description</a></li>
-                    <li class="nav-item"><a class=" nav-link" href="#Information" data-taget="#Information" role="tab" data-toggle="tab">Additional Information</a></li>
-                    <li class="nav-item"><a class=" nav-link" href="#Reviews" data-taget="#Reviews" role="tab" data-toggle="tab">Reviews <sup>3</sup></a></li>
+                    <li class="nav-item"><a class="active nav-link" href="#Description" data-taget="#Description"
+                                            role="tab" data-toggle="tab">Description</a></li>
+                    <li class="nav-item"><a class=" nav-link" href="#Information" data-taget="#Information" role="tab"
+                                            data-toggle="tab">Additional Information</a></li>
+                    <li class="nav-item"><a class=" nav-link" href="#Reviews" data-taget="#Reviews" role="tab"
+                                            data-toggle="tab">Reviews <sup>3</sup></a></li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane show active" id="Description" aria-expanded="true">
                         <p>
-                            Authentic keffiyeh master cleanse. Fingerstache semiotics PBR quinoa. Pop-up Godard kale chips, trust fund Neutra fingerstache paleo Wes Anderson. Deep v single-origin coffee cred Thundercats beard. Mumblecore before they sold out roof party biodiesel. Banksy swag Portland readymade synth messenger bag cliche.
+                            {{$product->text}}
                         </p>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="Information" aria-expanded="false">
-                        <table class="table-hover table"><tbody><tr class=""><th>Weight</th>
+                        <table class="table-hover table">
+                            <tbody>
+                            <tr class="">
+                                <th>Weight</th>
                                 <td><p>11.73 GM</p>
-                                </td></tr>
+                                </td>
+                            </tr>
                             <tr class="alt">
                                 <th>Dimensions</th>
                                 <td>
                                     <p>10 x 3 x 10 cm</p>
                                 </td>
                             </tr>
-                            <tr class=""><th>Materials</th>
+                            <tr class="">
+                                <th>Materials</th>
                                 <td><p>80% lorem, 20% ipsum</p>
                                 </td>
                             </tr>
@@ -122,7 +133,8 @@
                                     <p>Munali watches</p>
                                 </td>
                             </tr>
-                            <tr class=""><th>Size</th>
+                            <tr class="">
+                                <th>Size</th>
                                 <td>
                                     <p>One Size, XL, L, M, S</p>
                                 </td>
@@ -137,12 +149,14 @@
                                         <img src="/img/shop/avtar.png" alt="" class="img-circle" width="60">
                                     </span>
                                 <div class="review-content">
-                                    <span class="rating"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></span>
+                                    <span class="rating"><i class="ion-star"></i><i class="ion-star"></i><i
+                                            class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></span>
                                     <h4>John Doe</h4>
                                     <span class="time-review">12 Days Ago</span>
 
                                     <p>
-                                        Authentic keffiyeh master cleanse fingerstache. Deep v single-origin coffee cred Thundercats beard.
+                                        Authentic keffiyeh master cleanse fingerstache. Deep v single-origin coffee cred
+                                        Thundercats beard.
                                     </p>
                                 </div>
                             </li><!--review end-->
@@ -151,12 +165,14 @@
                                         <img src="/img/shop/avtar.png" alt="" class="img-circle" width="60">
                                     </span>
                                 <div class="review-content">
-                                    <span class="rating"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></span>
+                                    <span class="rating"><i class="ion-star"></i><i class="ion-star"></i><i
+                                            class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></span>
                                     <h4>John Doe</h4>
                                     <span class="time-review">12 Days Ago</span>
 
                                     <p>
-                                        Authentic keffiyeh master cleanse fingerstache. Deep v single-origin coffee cred Thundercats beard.
+                                        Authentic keffiyeh master cleanse fingerstache. Deep v single-origin coffee cred
+                                        Thundercats beard.
                                     </p>
                                 </div>
                             </li><!--review end-->
@@ -165,12 +181,14 @@
                                         <img src="/img/shop/avtar.png" alt="" class="img-circle" width="60">
                                     </span>
                                 <div class="review-content">
-                                    <span class="rating"><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></span>
+                                    <span class="rating"><i class="ion-star"></i><i class="ion-star"></i><i
+                                            class="ion-star"></i><i class="ion-star"></i><i class="ion-star"></i></span>
                                     <h4>John Doe</h4>
                                     <span class="time-review">12 Days Ago</span>
 
                                     <p>
-                                        Authentic keffiyeh master cleanse fingerstache. Deep v single-origin coffee cred Thundercats beard.
+                                        Authentic keffiyeh master cleanse fingerstache. Deep v single-origin coffee cred
+                                        Thundercats beard.
                                     </p>
                                 </div>
                             </li><!--review end-->
@@ -185,7 +203,8 @@
                             <form role="form">
                                 <div class="form-group">
                                     <label>Your Review</label>
-                                    <textarea class="form-control" rows="6" placeholder="Type Your Review Here"></textarea>
+                                    <textarea class="form-control" rows="6"
+                                              placeholder="Type Your Review Here"></textarea>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">

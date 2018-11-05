@@ -9,6 +9,7 @@
 namespace Tests\Feature\Web;
 
 
+use App\Product;
 use Tests\TestCase;
 
 class ProductTest extends TestCase
@@ -21,7 +22,8 @@ class ProductTest extends TestCase
 
     public function testShowProductPage()
     {
-        $this->get(route('products.show',1))
+        $product = factory(Product::class)->create();
+        $this->get(route('products.show', $product->id))
             ->assertStatus(200);
     }
 }

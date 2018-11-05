@@ -7,6 +7,7 @@ $factory->define(App\Article::class, function (Faker $faker) {
         'title' => $faker->sentence,
         'text' => $faker->realText(5000),
         'published_at' => $faker->dateTime,
+        'photo'=>''
     ];
 })->state(App\Article::class, 'photo', function ($faker) {
     return [
