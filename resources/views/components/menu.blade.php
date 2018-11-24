@@ -6,15 +6,12 @@
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="{{route('index')}}">
+            <a class="navbar-brand" href="{{route('products.index')}}">
                 <img src="{{$logo??'/img/logo-dark.png'}}" class="img-fluid logo-dark" alt="">
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="dropdown nav-item {{$isActiveRoute('index')}}">
-                        <a href="{{route('index')}}" class="nav-link">Главная</a>
-                    </li>
                     <li class="dropdown nav-item {{$areActiveRoutes(['products.index','products.show'])}}">
                         <a href="{{route('products.index')}}" class="nav-link">Каталог</a>
                     </li>

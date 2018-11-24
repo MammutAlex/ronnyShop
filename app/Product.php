@@ -21,6 +21,16 @@ class Product extends Model
         return Storage::url($this->photo);
     }
 
+    public function characteristics()
+    {
+        return $this->hasMany(ProductCharacteristic::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(ProductReview::class);
+    }
+
     public function getImagesUrlAttribute()
     {
         return collect($this->images)->map(function ($image) {

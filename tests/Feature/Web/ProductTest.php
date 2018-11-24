@@ -14,12 +14,6 @@ use Tests\TestCase;
 
 class ProductTest extends TestCase
 {
-    public function testShowProductListPage()
-    {
-        $this->get(route('products.index'))
-            ->assertStatus(200);
-    }
-
     public function testShowProductPage()
     {
         $product = factory(Product::class)->create();

@@ -8,11 +8,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ServiceTest extends TestCase
 {
-    public function testShowIndexPage()
-    {
-        $this->get(route('index'))
-            ->assertStatus(200);
-    }
 
     public function testShowAboutPage()
     {

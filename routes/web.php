@@ -11,13 +11,10 @@
 |
 */
 
-Route::get('/', 'ServiceController@index')->name('index');
+Route::get('/', 'ProductController@index')->name('products.index');
+Route::get('/products/{products}', 'ProductController@show')->name('products.show');
 Route::get('/about', 'ServiceController@about')->name('about');
 
 Route::resource('/blog', 'BlogController', [
-    'only' => ['index', 'show']
-]);
-
-Route::resource('/products', 'ProductController', [
     'only' => ['index', 'show']
 ]);
