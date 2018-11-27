@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->integer('category_id');
 
+            $table->string('url');
             $table->string('title');
             $table->string('sku');
             $table->string('short_description');

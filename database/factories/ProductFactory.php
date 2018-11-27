@@ -6,6 +6,7 @@ $factory->define(App\Product::class, function (Faker $faker) {
     return [
         'category_id' => \App\ProductCategory::inRandomOrder()->first()->id,
 
+        'url' => $faker->slug,
         'title' => $faker->sentence,
         'sku' => $faker->randomNumber,
         'short_description' => $faker->realText(200),

@@ -12,6 +12,9 @@ class Product extends Model
 
     protected $dates = ['deleted_at', 'published_at'];
 
+    public static $search = [
+        'title', 'sku'
+    ];
     protected $casts = [
         'images' => 'array',
     ];

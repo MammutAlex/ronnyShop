@@ -12,27 +12,35 @@ class ProductCategoriesTableSeeder extends Seeder
     public function run()
     {
         factory(\App\ProductCategory::class)->create([
-            'title' => 'Анальные пробки'
+            'url' => 'analnye_probki',
+            'title' => 'Анальные пробки',
         ]);
         factory(\App\ProductCategory::class)->create([
+            'url' => 'vibratory',
             'title' => 'Вибраторы'
         ]);
         factory(\App\ProductCategory::class)->create([
+            'url' => 'vakuumnye_stimulyatory',
             'title' => 'Вакуумные стимуляторы'
         ]);
         factory(\App\ProductCategory::class)->create([
+            'url' => 'masturbatory',
             'title' => 'Мастурбаторы'
         ]);
         factory(\App\ProductCategory::class)->create([
+            'url' => 'erekcionnye_kolca',
             'title' => 'Эрекционные кольца'
         ]);
         factory(\App\ProductCategory::class)->create([
+            'url' => 'smazki',
             'title' => 'Смазки'
         ]);
         factory(\App\ProductCategory::class)->create([
+            'url' => 'vse_dlya_prelyudii',
             'title' => 'Все для прелюдии'
         ]);
         factory(\App\ProductCategory::class)->create([
+            'url' => 'vaginalnye_trenazhery',
             'title' => 'Вагинальные тренажеры'
         ]);
     }

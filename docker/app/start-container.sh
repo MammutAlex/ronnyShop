@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-sed -i "s/xdebug\.remote_host\=.*/xdebug\.remote_host\=$XDEBUG_HOST/g" /etc/php/7.2/mods-available/xdebug.ini
-sed -i "s/xdebug\.remote_host\=.*/xdebug\.idekey\=$XDEBUG_IDEKEY/g" /etc/php/7.2/mods-available/xdebug.ini
-sed -i "s/xdebug\.remote_host\=.*/xdebug\.port\=$XDEBUG_PORT/g" /etc/php/7.2/mods-available/xdebug.ini
+echo "xdebug.idekey=$XDEBUG_IDEKEY" >> /etc/php/7.2/mods-available/xdebug.ini
+echo "xdebug.port=$XDEBUG_PORT" >> /etc/php/7.2/mods-available/xdebug.ini
+echo "xdebug.remote_host=$XDEBUG_HOST" >> /etc/php/7.2/mods-available/xdebug.ini
 
 ##
 # Ensure /.composer exists and is writable
