@@ -27,7 +27,10 @@ if (token) {
 
 
 import Moment from "moment";
+import Form from './core/Form/form';
 
 window.moment = Moment;
+window.Form = Form;
+
 require('moment/locale/ru');
 window.moment.locale('ru');

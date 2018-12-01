@@ -17,7 +17,7 @@ class ProductTest extends TestCase
     public function testShowProductPage()
     {
         $product = factory(Product::class)->create();
-        $this->get(route('products.show', $product->id))
+        $this->get(route('products.show', $product->url))
             ->assertStatus(200);
     }
 }

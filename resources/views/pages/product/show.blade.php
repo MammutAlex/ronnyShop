@@ -65,9 +65,13 @@
                     </form>
                     <div class="space-30"></div>
                     <ul class="list-unstyled text-left product-extra-info">
-                        <li><span>SKU</span> 73253-12</li>
-                        <li><span>Tag</span> <a href="#">Men's Wear</a></li>
-                        <li><span>Category</span> <a href="#">Watches</a></li>
+                        <li><span>SKU</span> {{$product->sku}}</li>
+                        <li><span>Категория</span>
+                            <a href="{{route('products.category',$product->category->url)}}">
+                                {{$product->category->title}}
+                            </a>
+                        </li>
+                        <li><span>Теги</span></li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +92,7 @@
                     </li>
                     <li class="nav-item">
                         <a class=" nav-link" href="#Reviews" data-taget="#Reviews" role="tab"
-                           data-toggle="tab">Отзивы <sup>3</sup></a>
+                           data-toggle="tab">Отзывы <sup>{{$product->reviews()->count()}}</sup></a>
                     </li>
                 </ul>
                 <!-- Tab panes -->

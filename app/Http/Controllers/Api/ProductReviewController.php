@@ -8,18 +8,19 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Requests\ProductReviewRequest;
 use App\Product;
 use App\Http\Resources\ProductReview as ReviewResource;
 
 class ProductReviewController extends BaseApiController
 {
-    public function show(Product $review)
+    public function index(Product $product)
     {
-        return ReviewResource::collection($review->reviews()->get());
+        return ReviewResource::collection($product->reviews()->get());
     }
 
-    public function store(ProductReviewRequest $request)
+    public function store(ProductReviewRequest $request, Product $product)
     {
-
+        return new ReviewResource($product->reviews()->create($request->all()));
     }
 }
