@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: "Ionicons";
-  src: url("../icons/fonts/ionicons.eot?v=2.0.0");
-  src: url("../icons/fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"),url("../icons/fonts/ionicons.ttf?v=2.0.0") format("truetype"),url("../icons/fonts/ionicons.woff?v=2.0.0") format("woff"),url("../icons/fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+  src: url("./icons/fonts/ionicons.eot?v=2.0.0");
+  src: url("./icons/fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"),url("./icons/fonts/ionicons.ttf?v=2.0.0") format("truetype"),url("./icons/fonts/ionicons.woff?v=2.0.0") format("woff"),url("./icons/fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -164,7 +164,6 @@
 /****************breadcrumbs*********************************************/
 .page-tree-bg,
 .page-tree-bg2 {
-  background-image: url("../img/bread-bg.png");
   background-position: center 688px;
   background-color: $skincolor;
   padding: 40px 0;
@@ -175,7 +174,6 @@
   margin-bottom: 0px;
 }
 .page-tree-bg2{
-    background-image: url("../img/bg-4.jpg");
     padding-top:200px;
 }
 h3.page-tree-text{
@@ -379,20 +377,6 @@ h3.heading-progress {
     height: 550px;
     background-color: #333 !important;
     padding: 100px 0 0;
-}
-
-#item-1{
-    background-image: url("../img/img-5.jpg");
-    width:100%;
-
-}
-#item-2{
-    background-image: url("../img/img-6.jpg");
-    width:100%;
-}
-#item-3{
-    background-image: url("../img/img-4.jpg");
-    width:100%;
 }
 
 a.carousel-control {

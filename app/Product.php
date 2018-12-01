@@ -19,6 +19,11 @@ class Product extends Model
         'images' => 'array',
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'url';
+    }
+
     public function getPhotoUrlAttribute()
     {
         return Storage::url($this->photo);
@@ -27,6 +32,11 @@ class Product extends Model
     public function characteristics()
     {
         return $this->hasMany(ProductCharacteristic::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(ProductCategory::class, 'category_id');
     }
 
     public function reviews()

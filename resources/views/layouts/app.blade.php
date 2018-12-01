@@ -14,16 +14,18 @@
 @yield('style')
 
 <!--Custom css-->
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="{{ mix('/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="preloader">
     <div id="preloader-inner"></div>
 </div><!--/preloader-->
-@section('header')
-    @include('components.menu')
-@show
-@yield('content')
+<div id="app">
+    @section('header')
+        @include('components.menu')
+    @show
+    @yield('content')
+</div>
 <!--footer-->
 <div id="footer">
     <div class="container">
@@ -121,9 +123,8 @@
 <!--back to top-->
 <a href="#" class="scrollToTop"><i class="ion-android-arrow-dropup-circle"></i></a>
 <!--back to top end-->
-<!-- jQuery plugins. -->
-<script src="/js/plugins/plugins.js"></script>
-<script src="/js/app.js"></script>
+<script src="{{ mix('/js/all.js') }}"></script>
+<script src="{{ mix('/js/app.js') }}"></script>
 @yield('script')
 </body>
 </html>

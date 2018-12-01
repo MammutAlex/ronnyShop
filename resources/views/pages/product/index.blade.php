@@ -25,9 +25,9 @@
                                 </div>
                             </div><!--end product thumb-->
                             <div class="product-desc">
-                                <h3><a href="{{route('products.show',$product->id)}}">{{$product->title}}</a></h3>
+                                <h3><a href="{{route('products.show',$product->url)}}">{{$product->title}}</a></h3>
                                 <p>{{$product->price}} &#8381;</p>
-                                <a href="{{route('products.show',$product->id)}}" class="btn theme-btn-default btn-lg">
+                                <a href="{{route('products.show',$product->url)}}" class="btn theme-btn-default btn-lg">
                                     Детальнее
                                 </a><!--product desc end-->
                             </div><!--product item end-->
@@ -42,7 +42,8 @@
                             <input type="text" class="form-control" placeholder="Поиск..." name="search"
                                    value="{{request('search')}}">
                             <i class="ion-search" data-toggle="tooltip" data-placement="top" title=""
-                               data-original-title="hit enter to search" onclick="document.getElementById('search-form').submit();"></i>
+                               data-original-title="hit enter to search"
+                               onclick="document.getElementById('search-form').submit();"></i>
                         </form>
                     </div>
                 </div><!--sidebar-box-->

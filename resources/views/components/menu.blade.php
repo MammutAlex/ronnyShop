@@ -21,6 +21,17 @@
                     <li class="dropdown nav-item {{$isActiveRoute('about')}}">
                         <a href="{{route('about')}}" class="nav-link">О нас</a>
                     </li>
+                    <li class=" dropdown nav-item ">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><i class="ion-ios-cart fs20"></i> (3)</a>
+                        <ul class="dropdown-menu dropdown-menu-right cart-dropdown">
+                            <li>Your cart</li>
+                            <li class="cart-footer d-flex flex-column pt-4">
+                                <a href="#" class="btn-dark btn btn-block">View cart</a>
+                                <a href="#" class="theme-btn-color btn btn-block">Checkout</a>
+
+                            </li>
+                        </ul>
+                    </li>
                     @auth
                         <li class="dropdown nav-item">
                             <a href="{{config('nova.path')}}" class="nav-link">Админ панель</a>

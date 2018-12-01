@@ -13,7 +13,7 @@
 
 Route::get('/', 'ProductController@index')->name('products.index');
 Route::get('/category/{category}', 'ProductController@category')->name('products.category');
-Route::get('/products/{products}', 'ProductController@show')->name('products.show');
+Route::get('/products/{product}', 'ProductController@show')->name('products.show');
 Route::get('/about', 'ServiceController@about')->name('about');
 
 Route::resource('/blog', 'BlogController', [
