@@ -4,7 +4,13 @@
              style="background-image: url({{isset($activeCategory)?$activeCategory->photo_url:''}})">
         <div class="container">
             <h3 class="page-tree-text">
-                {{isset($activeCategory)?$activeCategory->title:'Каталог'}}
+                @if(isset($activeCategory))
+                    {{$activeCategory->title}}
+                @elseif(isset($activeTag))
+                    #{{$activeTag->title}}
+                @else
+                    Каталог
+                @endif
             </h3>
         </div>
     </section><!--page-tree end here-->

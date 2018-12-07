@@ -71,7 +71,14 @@
                                 {{$product->category->title}}
                             </a>
                         </li>
-                        <li><span>Теги</span></li>
+                        <li>
+                            <span>Теги</span>
+                            @foreach($product->tags as $tag)
+                                <a href="{{route('products.tag',$tag)}}">
+                                    #{{$tag->title}}
+                                </a>
+                            @endforeach
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -34,6 +34,11 @@ class Product extends Model
         return $this->hasMany(ProductCharacteristic::class);
     }
 
+    public function tags()
+    {
+        return $this->belongsToMany(ProductTag::class);
+    }
+
     public function category()
     {
         return $this->belongsTo(ProductCategory::class, 'category_id');

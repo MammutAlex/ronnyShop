@@ -23,10 +23,10 @@ $factory->define(App\Product::class, function (Faker $faker) {
     factory(\App\ProductCharacteristic::class, 5)->create([
         'product_id' => $product['id']
     ]);
-})->afterCreating(App\Product::class, function ($product) {
     factory(\App\ProductReview::class, 5)->create([
         'product_id' => $product['id']
     ]);
+    $product->tags()->attach(\App\ProductTag::inRandomOrder()->take(5)->pluck('id'));
 })->state(App\Product::class, 'photo', function ($faker) {
     return [
         'photo' => substr($faker->image('public/storage', 400, 300), 15),

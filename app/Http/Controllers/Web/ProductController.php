@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\ProductTag;
 use App\SearchModel;
 use App\Product;
 use App\ProductCategory;
@@ -14,6 +15,19 @@ class ProductController extends BaseWebController
             'categories' => ProductCategory::get(),
             'products' => SearchModel::buildSearchQuery(
                 Product::where('show', true), request('search')
+            )->paginate(9),
+        ]);
+    }
+
+    public function tag(ProductTag $tag)
+    {
+        return view('pages.product.index', [
+            'activeTag' => $tag,
+            'categories' => ProductCategory::get(),
+            'products' => SearchModel::buildSearchQuery(
+                Product::whereHas('tags', function ($query) use ($tag) {
+                    $query->where('id', $tag->id);
+                })->where('show', true), request('search')
             )->paginate(9),
         ]);
     }
