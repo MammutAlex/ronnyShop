@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductCategory extends Model
 {
+
+    public function getRouteKeyName()
+    {
+        return 'url';
+    }
+
     public function getPhotoUrlAttribute()
     {
         return Storage::url($this->photo);

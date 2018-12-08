@@ -7,31 +7,53 @@
     <section id="content-region-3" class="padding-40 page-tree-bg">
         <div class="container">
             <h3 class="page-tree-text">
-                {{$blog->title}}
+                {{$post->title}}
             </h3>
         </div>
     </section><!--page-tree end here-->
     <div class="space-70"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-8">
                 <div class="blog-post-section">
                     <div class="blog-post-img">
-                        <img src="{{$blog->photo_url}}" class="img-fluid img-" alt="{{$blog->title}}">
+                        <img src="{{$post->photo_url}}" class="img-fluid img-" alt="{{$post->title}}">
                     </div>
                     <div class="blog-post-header">
-                        <h3><a href="" class="hover-color">{{$blog->title}}</a></h3>
+                        <h3><a href="" class="hover-color">{{$post->title}}</a></h3>
                     </div>
                     <div class="blog-post-info">
-                        <span>{{$blog->created_at->format('d-m-y')}}</span>
+                        <span>
+                            {{$post->created_at->format('d-m-y')}} |
+                            <a href="{{route('blog.category',$post->category->url)}}" class="hover-color">
+                                #{{$post->category->title}}
+                            </a>
+                        </span>
                     </div>
                     <div class="blog-post-detail">
-                        @markdown($blog->text)
+                        {!! $post->text !!}
                     </div>
                 </div><!--blog post section end-->
             </div><!--blog content-->
+            <div class="col-md-4">
+                <div class="sidebar-box">
+                    <h4>Похожие посты</h4>
+                    @foreach($categoryPosts as $article)
+                        <div class="recent">
+                            <span>
+                                <img src="{{$article->photo_url}}" class="img-fluid" alt="{{$article->title}}">
+                            </span>
+                            <p>
+                                <a href="{{route('blog.show',$post->url)}}" class="hover-color">{{$article->title}}</a>
+                            </p>
+                            <span class="recent-date">{{$article->created_at->format('d-m-y')}}</span>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+            </div>
         </div>
-
     </div><!--blog full page content end here-->
     <div class="space-70"></div>
 @endsection

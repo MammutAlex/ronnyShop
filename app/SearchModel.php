@@ -12,11 +12,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 class SearchModel
 {
-    public static function buildSearchModel($model, string $text): Builder
-    {
-        return self::buildSearch($model, $model::query(), $text);
-    }
-
     public static function buildSearchQuery($query, $text): Builder
     {
         if ($text) {

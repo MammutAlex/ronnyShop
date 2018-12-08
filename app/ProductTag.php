@@ -10,9 +10,4 @@ class ProductTag extends Model
     {
         return 'url';
     }
-
-    public function products()
-    {
-        return $this->belongsToMany(Product::class);
-    }
 }

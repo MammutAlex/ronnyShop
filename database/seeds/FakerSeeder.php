@@ -11,7 +11,8 @@ class FakerSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\ProductTag::class,20)->create();
-        factory(\App\Product::class,80)->state('photo')->create();
+        factory(\App\ProductTag::class, 5)->create();
+        factory(\App\Product::class, 10)->create();
+        factory(\App\Article::class, 10)->create();
     }
 }

@@ -7,50 +7,90 @@
     <section id="content-region-3" class="padding-40 page-tree-bg">
         <div class="container">
             <h3 class="page-tree-text">
-                Блог Ронни
+                @if(isset($activeCategory))
+                    #{{$activeCategory->title}}
+                @else
+                    Блог Ронни
+                @endif
             </h3>
         </div>
     </section><!--page-tree end here-->
     <div class="space-70"></div>
-    <div class="blog-masonary-wrapper">
-        <div class="container">
-            <div class="row mas-boxes" id="mas-boxes">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
                 @foreach ($articles as $post)
-                    <div class="mas-boxes-inner col-md-4 col-sm-6">
-                        <div class="news-sec wow animated bounceIn" data-wow-delay="0.3s">
-                            <div class="news-thumnail">
-                                <a href="{{route('blog.show',$post->id)}}">
-                                    <img src="{{$post->photo_url}}" class="img-fluid" alt="{{$post->title}}">
-                                </a>
-                            </div>
-                            <div class="news-desc">
-                                <h3 class="blog-post-title">
-                                    <a href="{{route('blog.show',$post->id)}}" class="hover-color">
-                                        {{$post->title}}
-                                    </a>
-                                </h3>
-                                <span class="news-post-cat">{{$post->created_at->format('d-m-y')}}</span>
-                                <p>
-                                    @markdown(str_limit($post->text,100))
-                                </p>
-                                <a href="{{route('blog.show',$post->id)}}" class="mas-link">
-                                    Продолжить чтение <i class="ion-ios-arrow-right"></i>
-                                </a>
-                            </div>
+                    <div class="blog-post-section">
+                        <div class="blog-post-img">
+                            <a href="{{route('blog.show',$post->url)}}">
+                                <img src="{{$post->photo_url}}" class="img-fluid" alt="{{$post->title}}">
+                            </a>
                         </div>
-                    </div>
+                        <div class="blog-post-header">
+                            <h3>
+                                <a href="{{route('blog.show',$post->url)}}" class="hover-color">
+                                    {{$post->title}}
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="blog-post-info">
+                            <span>
+                                {{$post->created_at->format('d-m-y')}}
+                                <a href="{{route('blog.category',$post->category->url)}}" class="hover-color">
+                                    #{{$post->category->title}}
+                                </a> |
+                                <a href="#" class="hover-color">3 comment</a>
+                            </span>
+                        </div>
+                        <div class="blog-post-detail">
+                            {!! str_limit($post->text,200) !!}
+                        </div>
+                        <div class="blog-post-more text-right">
+                            <a href="{{route('blog.show',$post->url)}}" class="btn theme-btn-default btn-lg">
+                                Продолжить чтение
+                            </a>
+                        </div>
+                    </div><!--blog post section end-->
+                    <div class="space-40"></div>
                 @endforeach
-            </div>
-        </div>
-        <div class="container">
-
-            <div class="clearfix">
-                <div class="float-right">
-                    {{ $articles->links() }}
+                <div class="clearfix">
+                    <div class="float-right">
+                        {{ $articles->links() }}
+                    </div>
                 </div>
+            </div><!--blog content-->
+            <div class="col-md-4">
+                <div class="sidebar-box">
+                    <div class="widget-search">
+                        <form class="search-form" action="{{request()->url()}}" method="get" id="search-form">
+                            <input type="text" class="form-control" placeholder="Поиск..." name="search"
+                                   value="{{request('search')}}">
+                            <i class="ion-search" data-toggle="tooltip" data-placement="top" title=""
+                               data-original-title="hit enter to search"
+                               onclick="document.getElementById('search-form').submit();"></i>
+                        </form>
+                    </div>
+                </div><!--sidebar-box-->
+                <hr>
+                <div class="sidebar-box">
+                    <h4>Категории</h4>
+                    <ul class="cat-list">
+                        @foreach($categories as $category)
+                            <li>
+                                <a href="{{route('blog.category',$category->url)}}"
+                                   data-toggle="tooltip"
+                                   data-placement="right" title=""
+                                   data-original-title="{{$category->articles()->count()}}"
+                                   class="hover-color {{isset($activeCategory) && $activeCategory->id === $category->id?'text-primary':''}}">
+                                    #{{$category->title}}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <hr>
             </div>
         </div>
-    </div><!--masonary wrapper-->
+    </div>
     <div class="space-70"></div>
 @endsection
 @section('script')

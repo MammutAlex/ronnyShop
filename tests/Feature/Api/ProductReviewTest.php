@@ -8,7 +8,6 @@
 
 namespace Tests\Feature\Api;
 
-
 use App\Product;
 
 class ProductReviewTest extends ApiTestCase
@@ -16,16 +15,17 @@ class ProductReviewTest extends ApiTestCase
     public function testGetAllReviews()
     {
         $product = factory(Product::class)->create();
-        $this->get(route('api.product.review.show',$product->url))
+        $this->json('GET', route('api.product.review.show', $product->url))
             ->assertStatus(200);
-}
+    }
+
     public function testCreateReview()
     {
         $product = factory(Product::class)->create();
-        $this->post(route('api.product.review.show',$product->url),[
-            'name'=>'name',
-            'email'=>'test@test.com',
-            'test'=>'test',
+        $this->json('POST',route('api.product.review.store', $product->url), [
+            'name' => 'name',
+            'email' => 'test@test.com',
+            'text' => 'test',
         ])->assertStatus(201);
-}
+    }
 }

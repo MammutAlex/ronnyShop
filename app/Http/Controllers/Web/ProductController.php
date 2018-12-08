@@ -32,14 +32,13 @@ class ProductController extends BaseWebController
         ]);
     }
 
-    public function category(string $category)
+    public function category(ProductCategory $category)
     {
-        $activeCategory = ProductCategory::where('url', $category)->firstOrFail();
         return view('pages.product.index', [
-            'activeCategory' => $activeCategory,
+            'activeCategory' => $category,
             'categories' => ProductCategory::get(),
             'products' => SearchModel::buildSearchQuery(
-                Product::where('category_id', $activeCategory->id)->where('show', true), request('search')
+                Product::where('category_id', $category->id)->where('show', true), request('search')
             )->paginate(9),
         ]);
     }
