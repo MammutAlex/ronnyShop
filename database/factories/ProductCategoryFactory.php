@@ -10,6 +10,6 @@ $factory->define(App\ProductCategory::class, function (Faker $faker) {
     ];
 })->state(App\Product::class, 'photo', function ($faker) {
     return [
-        'photo' => substr($faker->image('public/storage', 1920, 300), 15),
+        'photo' => substr($faker->image('public/storage', 1920, 1000), 15),
     ];
 });

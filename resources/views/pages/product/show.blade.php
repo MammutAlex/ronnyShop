@@ -50,19 +50,11 @@
             <div class="col-md-4">
                 <div class="product-detail">
                     <h2>{{$product->title}}</h2>
-                    <span class="price">{{$product->price}}</span>
+                    <span class="price">{{$product->price}} &#8381;</span>
                     <p>
                         {{$product->short_description}}
                     </p>
-                    <form class="cart">
-                        <div class="add-to-cart-table">
-                            <div class="quantity">
-                                <input type="number" step="1" min="1" name="quantity" value="1" title="Qty"
-                                       class="input-text qty text">
-                            </div>
-                            <button type="button" class="button">В корзину</button>
-                        </div>
-                    </form>
+                    <product-add-page-component id="{{$product->url}}"></product-add-page-component>
                     <div class="space-30"></div>
                     <ul class="list-unstyled text-left product-extra-info">
                         <li><span>SKU</span> {{$product->sku}}</li>

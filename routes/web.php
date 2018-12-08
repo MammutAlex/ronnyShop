@@ -16,6 +16,10 @@ Route::get('/tag/{tag}', 'ProductController@tag')->name('products.tag');
 Route::get('/category/{category}', 'ProductController@category')->name('products.category');
 Route::get('/category/{category}/{tag}', 'ProductController@categoryTag')->name('products.category.tag');
 Route::get('/products/{product}', 'ProductController@show')->name('products.show');
+
+Route::get('/checkout', 'CartController@show')->name('cart.checkout.show');
+Route::post('/checkout', 'CartController@store')->name('cart.checkout.store');
+
 Route::get('/about', 'ServiceController@about')->name('about');
 
 Route::resource('/blog', 'BlogController', [

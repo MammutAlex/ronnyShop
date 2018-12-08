@@ -24,11 +24,7 @@
                         <div class="col-md-4 product_item">
                             <div class="product-thumb">
                                 <img src="{{$product->photo_url}}" alt="{{$product->title}}" class="img-responsive">
-                                <div class="product-thumb-overlay">
-                                    <p>
-                                        <a href="#"><i class="ion-bag"></i> В корзину</a>
-                                    </p>
-                                </div>
+                                <product-add-list-component id="{{$product->url}}"></product-add-list-component>
                             </div><!--end product thumb-->
                             <div class="product-desc">
                                 <h3><a href="{{route('products.show',$product->url)}}">{{$product->title}}</a></h3>

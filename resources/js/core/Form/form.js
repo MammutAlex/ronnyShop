@@ -44,7 +44,6 @@ class Form {
     }
 
     hasError(field) {
-        console.log(this.errors.has(field));
         return this.errors.has(field);
     }
 
